@@ -1,0 +1,19 @@
+{% extends 'polls/base.html' %}
+
+{% block content %}
+<div class="req">
+    <h2>Request Poll To Be Added</h2><br>
+    <form class="req" action="/request/" method="post">
+        {% csrf_token %}
+        {{ form.request_question.label }}:<br>
+        {{ form.request_question }}<br><br>
+        {{ form.answer_option1.label }}:<br> 
+        {{ form.answer_option1 }}<br><br>
+        {{ form.answer_option2.label }}:<br>
+        {{ form.answer_option2 }}<br><br>
+        {{ form.answer_option3.label }}:<br>
+        {{ form.answer_option3 }}<br><br>
+        <input class="btn btn-outline-success" type="submit" value="Submit"><br>
+    </form>
+</div>
+{% endblock %}

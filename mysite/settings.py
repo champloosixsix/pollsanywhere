@@ -145,3 +145,11 @@ ACCOUNT_EMAIL_VERIFICATION = 'optional'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
 SOCIALACCOUNT_LOGIN_ON_GET=True
+
+#DEFAULT_FROM_EMAIL = "champlooengineering@gmail.com"
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "champloosixsix@gmail.com"
+EMAIL_HOST_PASSWORD = 'rdewqlxxhmvsmgvr'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
