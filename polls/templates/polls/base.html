@@ -62,8 +62,15 @@
     <hr>
     <header class="header"><h1>SIXSIX Polls</h1></header>
     <div class="mainbody">
-    {% block content%}
-    {% endblock %}
+      {% if user.is_authenticated %}
+      <div class="mainbody">
+      {% block content%}
+      {% endblock %}
+      </div>
+      {% else %}
+      <p style="text-align: center;">Please login to view polls.</p>
+      {% endif %}
+      {% endblock %}
     </div>
     <div id="footer">
       <footer>Copyright © 2023 webChamploo</footer></div>
